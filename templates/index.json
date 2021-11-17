@@ -10,6 +10,12 @@
             "heading_size": "medium"
           }
         },
+        "e36b2045-8c5d-4ab3-bc8d-5c1c1258c781": {
+          "type": "text",
+          "settings": {
+            "text": "Black Friday Pre-sale!"
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -24,6 +30,7 @@
       },
       "block_order": [
         "heading",
+        "e36b2045-8c5d-4ab3-bc8d-5c1c1258c781",
         "button"
       ],
       "settings": {
