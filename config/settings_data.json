@@ -33,7 +33,7 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/SensibleRest_WebsiteLogo1.png",
-          "logo_width": 240,
+          "logo_width": 250,
           "logo_position": "top-center",
           "menu": "main-menu",
           "show_line_separator": true,
