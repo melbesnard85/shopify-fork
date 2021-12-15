@@ -92,8 +92,8 @@
         "cfe078ec-88a7-481f-abaa-1b017107f153"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "hide_variants": true,
+        "enable_sticky_info": false,
+        "hide_variants": false,
         "enable_video_looping": false
       }
     },
