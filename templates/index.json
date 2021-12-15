@@ -51,11 +51,11 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "SensibleRest Bedding for Clearer, Softer Skin",
             "heading_size": "h1"
           }
         },
-        "text": {
+        "bcf5aebb-5daa-4e78-b940-dc937d98c38c": {
           "type": "text",
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
@@ -72,7 +72,7 @@
       },
       "block_order": [
         "heading",
-        "text",
+        "bcf5aebb-5daa-4e78-b940-dc937d98c38c",
         "button"
       ],
       "settings": {
@@ -83,11 +83,11 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Sleep's Coolest New Accessory",
         "collection": "all",
         "products_to_show": 4,
         "show_view_all": true,
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "image_ratio": "square",
         "show_secondary_image": false,
         "add_image_padding": false,
