@@ -46,13 +46,26 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
+        "ab0699e8-2d28-4606-99d9-581a8f40e7d7": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Description",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Technology",
+            "content": "",
+            "page": "",
+            "icon": "none"
           }
         }
       },
@@ -65,7 +78,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "ab0699e8-2d28-4606-99d9-581a8f40e7d7",
+        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031"
       ],
       "settings": {
         "enable_sticky_info": true,
