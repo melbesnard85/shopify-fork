@@ -11,7 +11,26 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
+<script>
 
+window.onload = (event) => {
+document.querySelector("li:nth-child(1) > img").classList.add('active-thumb');
+};
+
+      function newLargeImage(x) {
+            let clickedImage = x.dataset.mediaId;
+            const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+            const parentData = newImage.parentElement;
+
+            parentData.prepend(newImage);
+            newImage.style.display = "block";
+
+document.querySelectorAll('.slide-image')
+.forEach(thumb => thumb. classList.remove('active-thumb'));
+const sliderComp = document.querySelector("slider-component");
+document.querySelector(`[data-media-id="${clickedImage}"] > img`).classList.add('active-thumb');
+};
+</script>
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
@@ -24,20 +43,7 @@
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       
-       <div class="slider-container" >
-    <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
-{{ "accessibility.skip_to_product_info" | t }}
-   </a>
-    <ul class="large-image" id="large-image">
-        {%- for media in product.media -%}
-        <li class="large-image-item product__media-item grid__item slider__slide
-{% if media.media_type != 'image' %} hide-modal {% endif %}"
-data-media-id="{{ section.id }}-{{ media.id }}">
-{% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-       </li>
-       {%- endfor -%}
-    </ul>        
-</div>
+       
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
