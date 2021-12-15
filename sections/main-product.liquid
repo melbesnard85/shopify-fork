@@ -11,27 +11,6 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-<script>
-
-window.onload = (event) => {
-document.querySelector("li:nth-child(1) > img").classList.add('active-thumb');
-};
-
-      function newLargeImage(x) {
-            let clickedImage = x.dataset.mediaId;
-            const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-            const parentData = newImage.parentElement;
-
-            parentData.prepend(newImage);
-            newImage.style.display = "block";
-
-document.querySelectorAll('.slide-image')
-.forEach(thumb => thumb. classList.remove('active-thumb'));
-const sliderComp = document.querySelector("slider-component");
-document.querySelector(`[data-media-id="${clickedImage}"] > img`).classList.add('active-thumb');
-};
-</script>
-
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
