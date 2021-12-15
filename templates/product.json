@@ -67,6 +67,15 @@
             "page": "",
             "icon": "none"
           }
+        },
+        "cfe078ec-88a7-481f-abaa-1b017107f153": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Details",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
         }
       },
       "block_order": [
@@ -79,7 +88,8 @@
         "buy_buttons",
         "description",
         "ab0699e8-2d28-4606-99d9-581a8f40e7d7",
-        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031"
+        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031",
+        "cfe078ec-88a7-481f-abaa-1b017107f153"
       ],
       "settings": {
         "enable_sticky_info": true,
