@@ -57,56 +57,8 @@ data-media-id="{{ section.id }}-{{ media.id }}">
        {%- endfor -%}
     </ul>
 
-<slider-component >
-   <ul class="product-slider-box slider" role="list">
 
- {%- assign variant_images = product.images| where: 'attached_to_variant?', true | map: 'src' -%}
-
-{%- for media in product.media -%}
-      <li class="product-slider slider__slide" onclick="newLargeImage(this)" data-media-id="{{ section.id }}-{{ media.id }}"
-
-{% if section.settings.hide_variants and variant_images contains media.src %} style="display: none;" {% endif %}>
-
-{% if media.media_type == 'video' %}
-          <div class="video-btn" style="display: block" >
-             <span class="product__media-icon motion-reduce v-btn" aria-hidden="true">
-{%- liquid
-case media.media_type
-when 'video' or 'external_video'
-render 'icon-play'
-when 'model'
-render 'icon-3d-model'
-else
-render 'icon-zoom'
-endcase
--%}
-            </span>
-     <img class="slide-image"
-src="{{ media.preview_image | img_url: 'large' }}"
-alt="{{media.alt }}">
-         </div>
-{% else %}
-     <img class="slide-image"
-src="{{ media.preview_image | img_url: 'large' }}"
-alt="{{ media.alt}}">
-{% endif %}
-   </li>
-{% endfor %}
-</ul>
-<div class="slider-buttons {% if product.media.size < 5 %}hidden{% endif %}" style="display: flex">
-   <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-      <div class="slider-counter caption">
-           <span class="slider-counter--current">1</span>
-           <span aria-hidden="true"> / </span>
-           <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-           <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ product.media.size | minus: variant_images.size | plus: 1 }}{% else %}{{ product.media.size }}{% endif %}</span>
-      </div>
-    <button type="button" class="slider-button slider-button--next bigger-slider" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-    </div>
-   </slider-component>
 </div>
-      
-      <!--Original Slider
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
@@ -139,7 +91,7 @@ alt="{{ media.alt}}">
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
       </slider-component>
--->
+
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
