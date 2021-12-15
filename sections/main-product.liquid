@@ -56,10 +56,7 @@ data-media-id="{{ section.id }}-{{ media.id }}">
        </li>
        {%- endfor -%}
     </ul>
-
-
-</div>
-      <slider-component class="slider-mobile-gutter">
+         <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
@@ -91,6 +88,10 @@ data-media-id="{{ section.id }}-{{ media.id }}">
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
       </slider-component>
+
+
+</div>
+      
 
       {%- if first_3d_model -%}
         <button
