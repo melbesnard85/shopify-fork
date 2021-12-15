@@ -54,17 +54,10 @@
             "heading": "SensibleRest Bedding for Clearer, Softer Skin",
             "heading_size": "h1"
           }
-        },
-        "bcf5aebb-5daa-4e78-b940-dc937d98c38c": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
         }
       },
       "block_order": [
-        "heading",
-        "bcf5aebb-5daa-4e78-b940-dc937d98c38c"
+        "heading"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -78,7 +71,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/SR_Icons_Web_500pxX500px_0007_Vector-Smart-Object_2.png",
-            "title": "Column",
+            "title": "Skin Rejuvenation",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -88,7 +81,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/SR_Icon2_400x_fba73bce-80b1-43ee-a8cd-b7411f47f05f.png",
-            "title": "Column",
+            "title": "Breathable Membrane",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
