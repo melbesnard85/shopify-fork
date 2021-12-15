@@ -11,6 +11,27 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
+<script>
+
+window.onload = (event) => {
+document.querySelector("li:nth-child(1) > img").classList.add('active-thumb');
+};
+
+      function newLargeImage(x) {
+            let clickedImage = x.dataset.mediaId;
+            const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+            const parentData = newImage.parentElement;
+
+            parentData.prepend(newImage);
+            newImage.style.display = "block";
+
+document.querySelectorAll('.slide-image')
+.forEach(thumb => thumb. classList.remove('active-thumb'));
+const sliderComp = document.querySelector("slider-component");
+document.querySelector(`[data-media-id="${clickedImage}"] > img`).classList.add('active-thumb');
+};
+</script>
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -21,6 +42,71 @@
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
+      
+       <div class="slider-container" >
+    <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+{{ "accessibility.skip_to_product_info" | t }}
+   </a>
+    <ul class="large-image" id="large-image">
+        {%- for media in product.media -%}
+        <li class="large-image-item product__media-item grid__item slider__slide
+{% if media.media_type != 'image' %} hide-modal {% endif %}"
+data-media-id="{{ section.id }}-{{ media.id }}">
+{% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
+       </li>
+       {%- endfor -%}
+    </ul>
+
+<slider-component >
+   <ul class="product-slider-box slider" role="list">
+
+ {%- assign variant_images = product.images| where: 'attached_to_variant?', true | map: 'src' -%}
+
+{%- for media in product.media -%}
+      <li class="product-slider slider__slide" onclick="newLargeImage(this)" data-media-id="{{ section.id }}-{{ media.id }}"
+
+{% if section.settings.hide_variants and variant_images contains media.src %} style="display: none;" {% endif %}>
+
+{% if media.media_type == 'video' %}
+          <div class="video-btn" style="display: block" >
+             <span class="product__media-icon motion-reduce v-btn" aria-hidden="true">
+{%- liquid
+case media.media_type
+when 'video' or 'external_video'
+render 'icon-play'
+when 'model'
+render 'icon-3d-model'
+else
+render 'icon-zoom'
+endcase
+-%}
+            </span>
+     <img class="slide-image"
+src="{{ media.preview_image | img_url: 'large' }}"
+alt="{{media.alt }}">
+         </div>
+{% else %}
+     <img class="slide-image"
+src="{{ media.preview_image | img_url: 'large' }}"
+alt="{{ media.alt}}">
+{% endif %}
+   </li>
+{% endfor %}
+</ul>
+<div class="slider-buttons {% if product.media.size < 5 %}hidden{% endif %}" style="display: flex">
+   <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+      <div class="slider-counter caption">
+           <span class="slider-counter--current">1</span>
+           <span aria-hidden="true"> / </span>
+           <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
+           <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ product.media.size | minus: variant_images.size | plus: 1 }}{% else %}{{ product.media.size }}{% endif %}</span>
+      </div>
+    <button type="button" class="slider-button slider-button--next bigger-slider" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
+    </div>
+   </slider-component>
+</div>
+      
+      <!--Original Slider
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
@@ -53,6 +139,7 @@
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
       </slider-component>
+-->
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
