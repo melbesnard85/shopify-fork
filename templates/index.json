@@ -52,7 +52,7 @@
           "type": "heading",
           "settings": {
             "heading": "SensibleRest Bedding for Clearer, Softer Skin",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         }
       },
@@ -119,9 +119,9 @@
       "settings": {
         "title": "Sleep's Coolest New Accessory",
         "collection": "all",
-        "products_to_show": 4,
+        "products_to_show": 2,
         "show_view_all": true,
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "image_ratio": "square",
         "show_secondary_image": false,
         "add_image_padding": true,
