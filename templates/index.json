@@ -52,7 +52,7 @@
           "type": "heading",
           "settings": {
             "heading": "SensibleRest Bedding for Clearer, Softer Skin",
-            "heading_size": "h2"
+            "heading_size": "h0"
           }
         }
       },
@@ -61,7 +61,7 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true
+        "full_width": false
       }
     },
     "multi_column": {
@@ -109,7 +109,7 @@
         "image_ratio": "adapt",
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "swipe_on_mobile": true
       }
