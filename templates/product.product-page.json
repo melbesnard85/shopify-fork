@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "ab0699e8-2d28-4606-99d9-581a8f40e7d7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Description",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Technology",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "cfe078ec-88a7-481f-abaa-1b017107f153": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Details",
+            "content": "<p><strong>Our Duvet Cover is as dreamy as it gets!<\/strong><\/p><p>Designed, developed, and manufactured in Spain with premium 100% TENCEL™ — an innovative natural origin fiber made from the eucalyptus tree, our Duvet Cover is made from a comfy knitted fabric which makes it ultra-soft. You will fall in love with its practicality, lightness, and timeless design.<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "subtitle",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "ab0699e8-2d28-4606-99d9-581a8f40e7d7",
+        "7b1e7765-ce4c-4dc7-a837-0eeabfd33031",
+        "cfe078ec-88a7-481f-abaa-1b017107f153"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
+}
