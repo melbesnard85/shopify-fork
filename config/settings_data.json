@@ -46,13 +46,21 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "Helpful Links",
               "menu": "footer"
+            }
+          },
+          "048d9732-1e3c-4fa0-8926-4b5e67e6ec90": {
+            "type": "text",
+            "settings": {
+              "heading": "Contact Info",
+              "subtext": "<p>230 Rock Hill Rd.<br\/>Bala Cynwyd, PA 19004<br\/>(484) 278-4941<\/p>"
             }
           }
         },
         "block_order": [
-          "footer-0"
+          "footer-0",
+          "048d9732-1e3c-4fa0-8926-4b5e67e6ec90"
         ],
         "settings": {
           "color_scheme": "background-1",
